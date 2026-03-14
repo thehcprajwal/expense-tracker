@@ -13,11 +13,25 @@ export default defineConfig({
 				name: 'Expense Tracker',
 				short_name: 'Expense Tracker',
 				description: 'A personal expense tracker built with SvelteKit.',
+				id: '/',
 				display: 'standalone',
 				background_color: '#F6F1E8',
 				theme_color: '#155E63',
-				start_url: '/dashboard',
+				start_url: '/',
+				scope: '/',
 				icons: [
+					{
+						src: '/pwa-192x192.png',
+						sizes: '192x192',
+						type: 'image/png',
+						purpose: 'any maskable'
+					},
+					{
+						src: '/pwa-512x512.png',
+						sizes: '512x512',
+						type: 'image/png',
+						purpose: 'any maskable'
+					},
 					{
 						src: '/icon.svg',
 						sizes: 'any',
