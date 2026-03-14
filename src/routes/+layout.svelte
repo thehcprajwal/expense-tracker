@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { Wallet } from 'lucide-svelte';
+	import { registerSW } from 'virtual:pwa-register';
 	import AuthScreen from '$lib/features/auth/components/AuthScreen.svelte';
 	import { initializeApp } from '$lib/bootstrap/initialize-app';
 	import { UserMenu } from '$lib/features/settings';
@@ -43,6 +44,7 @@
 	}
 
 	onMount(async () => {
+		registerSW({ immediate: true });
 		await initializeApp();
 		appReady = true;
 	});
